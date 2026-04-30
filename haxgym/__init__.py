@@ -1,7 +1,6 @@
 from typing import Tuple, Any, Dict, Callable, Optional
 from .physics.core import get_classic_params, get_classic_segments, get_classic_planes
 from .envs.classic import env_step as classic_env_step, reset as classic_reset, EnvState
-from .envs.pass_game import env_step as pass_env_step, reset as pass_reset
 
 __version__ = "0.2.0"
 
@@ -72,11 +71,4 @@ register(
     step_fn=classic_env_step,
     reset_fn=classic_reset,
     description="Standard 3v3 Haxball with goal-based rewards."
-)
-
-register(
-    env_id="Haxball-Pass-v0",
-    step_fn=pass_env_step,
-    reset_fn=pass_reset,
-    description="Training mode: Most successful passes wins the match."
 )

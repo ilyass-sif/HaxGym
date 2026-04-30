@@ -5,11 +5,11 @@
 
 **HaxGym** is a ridiculously fast, fully hardware-accelerated Reinforcement Learning environment for [Haxball](https://www.haxball.com/), written entirely in **JAX**.
 
-By leveraging JAX's `vmap` and `jit` capabilities, HaxGym can simulate **over 1.35 Million frames per second** on a single GPU (NVIDIA T4), making it possible to train high-level multi-agent policies (like Tiki-Taka) via self-play in a matter of hours instead of weeks.
+By leveraging JAX's `vmap` and `jit` capabilities, HaxGym can simulate **over 1.35 Million frames per second** on a single **NVIDIA RTX 4050 Laptop GPU**, making it possible to train high-level multi-agent policies (like Tiki-Taka) via self-play in a matter of hours instead of weeks.
 
 ## ⚡ Performance
 
-HaxGym is built for extreme scale. Here are the benchmark results on a standard NVIDIA T4 GPU:
+HaxGym is built for extreme scale. Here are the benchmark results on an **NVIDIA RTX 4050 Laptop GPU**:
 
 | Metric | Result |
 | :--- | :--- |
@@ -61,16 +61,14 @@ next_state, obs, rewards, done = env.step(rng, state, actions)
 print(f"Rewards: {rewards}")
 ```
 
+
 ## 🏆 Available Environments
 
 | ID | Description |
 | :--- | :--- |
 | `Haxball-Classic-v0` | The standard 3v3 Haxball game. First team to score, or highest score after 1 minute. Sparse + dense curriculum rewards. |
-| `Haxball-Pass-v0` | A specialized training mode where the game lasts exactly 1 minute, goals are disabled, and the team with the most successful passes wins. |
 
 ## 🧠 What's in the Observation Space?
-
-For every player, the environment returns a `(32,)` vector containing:
 - Self absolute position and velocity.
 - Ball relative position and velocity.
 - 2 Teammates relative positions and velocities.
