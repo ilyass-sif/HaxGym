@@ -3,9 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![JAX](https://img.shields.io/badge/JAX-Accelerated-blue)](https://github.com/google/jax)
 
-**HaxGym** is a ridiculously fast, fully hardware-accelerated Reinforcement Learning environment for [Haxball](https://www.haxball.com/), written entirely in **JAX**.
+**HaxGym** is a fast, fully hardware-accelerated Reinforcement Learning environment for [Haxball](https://www.haxball.com/), written entirely in **JAX**.
 
-By leveraging JAX's `vmap` and `jit` capabilities, HaxGym can simulate **over 1.35 Million frames per second** on a single **NVIDIA RTX 4050 Laptop GPU**, making it possible to train high-level multi-agent policies (like Tiki-Taka) via self-play in a matter of hours instead of weeks.
+By leveraging JAX's `vmap` and `jit` capabilities, HaxGym can simulate **over 1.35 Million frames per second** on a single **NVIDIA RTX 4050 Laptop GPU**, making it possible to train high-level multi-agent policies via self-play in a matter of hours instead of weeks.
 
 ## ⚡ Performance
 
@@ -66,7 +66,7 @@ print(f"Rewards: {rewards}")
 
 | ID | Description |
 | :--- | :--- |
-| `Haxball-Classic-v0` | The standard 3v3 Haxball game. First team to score, or highest score after 1 minute. Sparse + dense curriculum rewards. |
+| `Haxball-Classic-v0` | The standard 3v3 Haxball game. First team to score in 1 minute. Sparse + dense curriculum rewards. |
 
 ## 🧠 What's in the Observation Space?
 - Self absolute position and velocity.
