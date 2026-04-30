@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+haxgym/__init__.py
+haxgym.egg-info/PKG-INFO
+haxgym.egg-info/SOURCES.txt
+haxgym.egg-info/dependency_links.txt
+haxgym.egg-info/requires.txt
+haxgym.egg-info/top_level.txt
+haxgym/envs/__init__.py
+haxgym/envs/classic.py
+haxgym/envs/pass_game.py
+haxgym/physics/__init__.py
+haxgym/physics/core.py

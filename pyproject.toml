@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "haxgym"
+version = "0.1.0"
+authors = [
+  { name="HaxBot Research" },
+]
+description = "A high-performance JAX-based RL environment for Haxball."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "jax",
+    "jaxlib",
+    "numpy",
+    "typing-extensions"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
